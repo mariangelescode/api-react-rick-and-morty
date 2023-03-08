@@ -1,0 +1,31 @@
+.container__character{
+    max-width: 250px;
+    width: 100%;
+}
+
+.img__character{
+    max-width: 200px;
+    width: 100%;
+    border-radius: 50%;
+    transition: all 1s ease;
+}
+
+.img__character:hover{
+    transform: rotateY(360deg);
+}
+
+.alive{
+    border: 5px solid green;
+}
+
+
+
+.dead{
+    border: 5px solid red;
+}
+
+.container__name{
+    font-size: 1.2em;
+    font-family: sans-serif;
+    font-weight: bolder;
+}

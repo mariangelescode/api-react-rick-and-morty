@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react'
 import './Container.css'
-import Character from '../Characters/Characters';
+import Characters from '../Characters/Characters';
 
 
 const url = 'https://rickandmortyapi.com/api/character'
 
 export default function Container() {
-    const [characters, setCharacters] = useState([]);
+    const [characters, setCharacters] = useState<{
+        name: string,
+        image: string,
+        status: string}[]>([]);
+    
 
     useEffect( () => {
         
@@ -27,9 +31,10 @@ export default function Container() {
             
             characters.map(character => {
                 return (
-                    <Character 
+                    <Characters 
                         name={character.name}
                         img={character.image}
+                        status={character.status}
                     />
                 )
             })
